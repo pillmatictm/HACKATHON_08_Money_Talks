@@ -16,6 +16,10 @@ public class SurveyQuestionsFrag extends Fragment {
         // Required empty public constructor
     }
 
+    public static SurveyQuestionsFrag newInstance() {
+        return new SurveyQuestionsFrag();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
