@@ -27,6 +27,7 @@ public class MainFragment extends Fragment {
     TextView selectARisk;
     Button submitButton;
     FragmentInterface fragmentInterface;
+    TextView FAQ;
 
 
     public MainFragment() {
@@ -60,6 +61,13 @@ public class MainFragment extends Fragment {
         moderateRisk = view.findViewById(R.id.moderate_risk);
         highRisk = view.findViewById(R.id.high_risk);
         idk = view.findViewById(R.id.dont_know);
+        FAQ = view.findViewById(R.id.main_fragment_faq_text_view);
+        FAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            fragmentInterface.startFaqFrag();
+            }
+        });
         submitButton = view.findViewById(R.id.submit_button);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startMainFrag();
     }
 
     @Override
