@@ -1,6 +1,7 @@
 package org.pursuit.hackathon_8_money_talks.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,6 +15,9 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import org.pursuit.hackathon_8_money_talks.R;
+import org.pursuit.hackathon_8_money_talks.activities.HighRiskActivity;
+import org.pursuit.hackathon_8_money_talks.activities.LowRiskActivity;
+import org.pursuit.hackathon_8_money_talks.activities.ModerateRiskActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +31,17 @@ public class MainFragment extends Fragment {
 
     public MainFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        fragmentInterface = (FragmentInterface) context;
+    }
+
+    public static Fragment newInstance() {
+        final MainFragment mainFragment = new MainFragment();
+        return mainFragment;
     }
 
 
