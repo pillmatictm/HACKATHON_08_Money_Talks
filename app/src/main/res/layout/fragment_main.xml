@@ -62,7 +62,7 @@
     android:linksClickable="true"
     android:textStyle="bold"
     android:textSize="15sp"
-    android:onClick="startFaqFrag"
+    android:clickable="true"
     android:textColor="@color/design_default_color_primary_dark"
     android:text="@string/faq"/>
 

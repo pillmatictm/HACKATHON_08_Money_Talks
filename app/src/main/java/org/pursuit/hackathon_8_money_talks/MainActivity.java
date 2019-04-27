@@ -35,19 +35,13 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
 
     @Override
     public void startFaqFrag() {
-
-
-    @Override
-    public void startQuestionaireFrag() {
-    final Fragment surveyQuestionsFragment = SurveyQuestionsFrag.newInstance();
-    inflateFragment(surveyQuestionsFragment);
     }
 
-    private void inflateFragment(@NonNull Fragment fragment) {
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, fragment)
-                .addToBackStack(null)
-                .commit();
+        private void inflateFragment (@NonNull Fragment fragment){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
     }
-}
 

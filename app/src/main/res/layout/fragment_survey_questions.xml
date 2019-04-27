@@ -7,8 +7,6 @@
 
 <!--<android.support.v7.widget.RecyclerView-->
     <!--android:layout_width=""-->
-    <!--android:layout_height="">-->
-    <!---->
-<!--</android.support.v7.widget.RecyclerView>-->
+    <!--android:layout_height=""></android.support.v7.widget.RecyclerView>-->
 
 </LinearLayout>
