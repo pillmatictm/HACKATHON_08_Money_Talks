@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".fragments.SurveyQuestionsFrag">
 
-<android.support.v7.widget.RecyclerView
-    android:layout_width=""
-    android:layout_height=""></android.support.v7.widget.RecyclerView>
+<!--<android.support.v7.widget.RecyclerView-->
+    <!--android:layout_width=""-->
+    <!--android:layout_height=""></android.support.v7.widget.RecyclerView>-->
 
 </LinearLayout>
