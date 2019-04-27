@@ -75,7 +75,6 @@ public class MainFragment extends Fragment {
         if (lowRisk.isChecked()){
             Intent intent = new Intent(v.getContext(), LowRiskActivity.class);
             startActivity(intent);
-
         } else if (moderateRisk.isChecked()){
             Intent intent = new Intent(v.getContext(), ModerateRiskActivity.class);
             startActivity(intent);
