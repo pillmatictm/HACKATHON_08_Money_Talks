@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 
 import org.pursuit.hackathon_8_money_talks.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SurveyQuestionsFrag extends Fragment {
 
 
