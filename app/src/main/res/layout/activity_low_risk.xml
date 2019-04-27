@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".riskactivities.LowRiskActivity">
+    android:orientation="vertical"
+    tools:context=".activities.LowRiskActivity">
+   <android.support.v7.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/low_risk_activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/low_risk"
+        />
+   </android.support.v7.widget.CardView>
+    <TextView
+    android:id="@+id/low_risk_activity_description"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="25sp"
+    android:textAlignment="center"
+    android:text="a bunch of words we dont know what's going in here yet blah blah blah blah blah blah blah blah"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/low_risk_activity_resources"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="@string/resources"/>
+    <TextView
+        android:id="@+id/low_risk_activity_link1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="link1"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/low_risk_activity_link2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="link2"/>
+    <TextView
+        android:id="@+id/low_risk_activity_link3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="link3"/>
+
+
+</LinearLayout>
