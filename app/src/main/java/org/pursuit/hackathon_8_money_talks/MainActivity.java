@@ -10,15 +10,12 @@ import org.pursuit.hackathon_8_money_talks.fragments.SurveyQuestionsFrag;
 
 public class MainActivity extends AppCompatActivity implements FragmentInterface {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-
 
     @Override
     public void startMainFrag() {
@@ -39,6 +36,11 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     @Override
     public void startFaqFrag() {
 
+
+    @Override
+    public void startQuestionaireFrag() {
+    final Fragment surveyQuestionsFragment = SurveyQuestionsFrag.newInstance();
+    inflateFragment(surveyQuestionsFragment);
     }
 
     private void inflateFragment(@NonNull Fragment fragment) {
@@ -48,3 +50,4 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
                 .commit();
     }
 }
+
