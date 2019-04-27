@@ -13,13 +13,11 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
     @Override
     public void startMainFrag() {
-
     }
 
     @Override
@@ -36,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     @Override
     public void startFaqFrag() {
     }
+
 
         private void inflateFragment (@NonNull Fragment fragment){
             getSupportFragmentManager().beginTransaction()
