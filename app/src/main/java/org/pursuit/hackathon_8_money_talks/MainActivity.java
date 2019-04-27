@@ -13,8 +13,29 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    public void startMainFrag() {
+
+    }
+
+    @Override
+    public void startQuestionaireFrag() {
+        final Fragment surveyQuestionsFragment = SurveyQuestionsFrag.newInstance();
+        inflateFragment(surveyQuestionsFragment);
+    }
+
+    @Override
+    public void startResponseFrag() {
+
+    }
+
+    @Override
+    public void startFaqFrag() {
+
 
     @Override
     public void startQuestionaireFrag() {
@@ -29,3 +50,4 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
                 .commit();
     }
 }
+
