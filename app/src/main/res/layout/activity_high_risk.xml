@@ -4,30 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".activities.HighRiskActivity">
 
-    <android.support.v7.widget.CardView
+    <TextView
+        android:id="@+id/high_risk_activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/high_risk"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/high_risk_stocks_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Stocks"
+        android:textSize="20sp" />
+    <FrameLayout
+        android:id="@+id/high_risk_stocks_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/high_risk_activity_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/moderate_risk"
-            android:textAlignment="center"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-    </android.support.v7.widget.CardView>
-
+    </FrameLayout>
     <TextView
-        android:id="@+id/high_risk_activity_description"
+        android:id="@+id/high_risk_for_ex_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="a bunch of words we dont know what's going in here yet blah blah blah blah blah blah blah blah"
-        android:textAlignment="center"
-        android:textSize="25sp" />
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="FOR EX"
+        android:textSize="20sp"/>
+    <FrameLayout
+        android:id="@+id/high_risk_for_ex_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
 
 
 </LinearLayout>
