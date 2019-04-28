@@ -98,4 +98,5 @@
     <string name="faq_investopedia_text">Investopedia</string>
     <string name="faq_babypips_text">Babypips</string>
     <string name="faq_the_balance_text">The Balance</string>
+    <string name="result_moderate">You should look into /nMODERATE RISK</string>
 </resources>
