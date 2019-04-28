@@ -1,13 +1,12 @@
 package org.pursuit.hackathon_8_money_talks.network;
 
-import org.pursuit.hackathon_8_money_talks.models.moderate.MonthlyMetaDataWrapper;
+import org.pursuit.hackathon_8_money_talks.models.high.DailyMetaDataWrapper;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface ModerateApiCall {
-
+public interface HighRiskApiCall {
     String ENDPOINT = "query";
     String FUNCTION = "function";
     String SYMBOL = "symbol";
@@ -15,11 +14,8 @@ public interface ModerateApiCall {
 
 
     @GET(ENDPOINT)
-    Call<MonthlyMetaDataWrapper> getMonthlyData(
+    Call<DailyMetaDataWrapper> getDailyData(
             @Query(FUNCTION) String function,
             @Query(SYMBOL) String symbol,
             @Query(API_KEY) String apiKey);
-
-
-
 }
