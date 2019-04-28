@@ -36,7 +36,7 @@ public class ModerateRiskActivity extends AppCompatActivity {
                 .enqueue(new Callback<MonthlyMetaDataWrapper>() {
                     @Override
                     public void onResponse(Call<MonthlyMetaDataWrapper> call, Response<MonthlyMetaDataWrapper> response) {
-                        Log.d(TAG, "onResponse: " + response.body());
+                        Log.d(TAG, "onResponse: Moderate" + response.body());
                     }
 
                     @Override
