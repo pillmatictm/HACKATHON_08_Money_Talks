@@ -55,27 +55,27 @@ public class ModerateRiskActivity extends AppCompatActivity {
                     public void onResponse(Call<MonthlyMetaDataWrapper> call, Response<MonthlyMetaDataWrapper> response) {
                         Log.d(TAG, "onResponse: Moderate" + response.body());
                         MonthData apr262019 = response.body().getMonthlyTimeSeries().getApr262019();
-                        String Apr = "Open: " + apr262019.getOpen() + "\n" + "Close: " +apr262019.getClose() + "\n" + "High: " + apr262019.getHigh() + "\n" + "Low: " +apr262019.getLow();
+                        String Apr = "April" + "\nOpen: " + apr262019.getOpen() + "     " + "Close: " +apr262019.getClose() + "\n" + "Low: " + apr262019.getLow() + "       " + "High: " +apr262019.getHigh();
                         april.setText(Apr);
 
                         MonthData mar262019 = response.body().getMonthlyTimeSeries().getApr262019();
-                        String Mar = "Open: " + mar262019.getOpen() + "\n" + "Close: " +mar262019.getClose() + "\n" + "High: " + mar262019.getHigh() + "\n" + "Low: " +mar262019.getLow();
+                        String Mar = "March" + "\nOpen: " + mar262019.getOpen() + "     " + "Close: " +mar262019.getClose() + "\n" + "Low: " + mar262019.getLow() + "       " + "High: " +mar262019.getHigh();
                         march.setText(Mar);
 
                         MonthData feb262019 = response.body().getMonthlyTimeSeries().getApr262019();
-                        String Feb = "Open: " + feb262019.getOpen() + "\n" + "Close: " +feb262019.getClose() + "\n" + "High: " + feb262019.getHigh() + "\n" + "Low: " +feb262019.getLow();
+                        String Feb = "February" + "\nOpen: " + feb262019.getOpen() + "     " + "Close: " +feb262019.getClose() + "\n" + "Low: " + feb262019.getLow() + "       " + "High: " +feb262019.getHigh();
                         february.setText(Feb);
 
                         MonthData jan262019 = response.body().getMonthlyTimeSeries().getApr262019();
-                        String Jan = "Open: " + jan262019.getOpen() + "\n" + "Close: " +jan262019.getClose() + "\n" + "High: " + jan262019.getHigh() + "\n" + "Low: " +jan262019.getLow();
+                        String Jan = "January" + "\nOpen: " + jan262019.getOpen() + "     " + "Close: " +jan262019.getClose() + "\n" + "Low: " + jan262019.getLow() + "       " + "High: " +jan262019.getHigh();
                         january.setText(Jan);
 
                         MonthData dec262019 = response.body().getMonthlyTimeSeries().getApr262019();
-                        String Dec = "Open: " + dec262019.getOpen() + "\n" + "Close: " +dec262019.getClose() + "\n" + "High: " + dec262019.getHigh() + "\n" + "Low: " +dec262019.getLow();
+                        String Dec = "December" + "\nOpen: " + dec262019.getOpen() + "     " + "Close: " +dec262019.getClose() + "\n" + "Low: " + dec262019.getLow() + "       " + "High: " +dec262019.getHigh();
                         december.setText(Dec);
 
                         MonthData nov262019 = response.body().getMonthlyTimeSeries().getApr262019();
-                        String Nov = "Open: " + nov262019.getOpen() + "\n" + "Close: " +nov262019.getClose() + "\n" + "High: " + nov262019.getHigh() + "\n" + "Low: " +nov262019.getLow();
+                        String Nov = "November" + "\nOpen: " + nov262019.getOpen() + "     " + "Close: " +nov262019.getClose() + "\n" + "Low: " + nov262019.getLow() + "       " + "High: " +nov262019.getHigh();
                         november.setText(Nov);
 
 
