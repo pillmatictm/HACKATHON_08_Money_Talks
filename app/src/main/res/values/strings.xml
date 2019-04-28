@@ -10,6 +10,7 @@
     <string name="high_risk">High Risk</string>
     <string name="dont_know">I don\'t know!</string>
     <string name="submit">Submit</string>
-    <string name="faq">FAQ</string>
+    <string name="faq"><u>FAQ</u></string>
     <string name="resources">Resources</string>
+    <string name="toolbar_title">Money Talks</string>
 </resources>
