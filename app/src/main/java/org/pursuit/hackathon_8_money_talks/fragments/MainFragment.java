@@ -19,9 +19,6 @@ import org.pursuit.hackathon_8_money_talks.activities.HighRiskActivity;
 import org.pursuit.hackathon_8_money_talks.activities.LowRiskActivity;
 import org.pursuit.hackathon_8_money_talks.activities.ModerateRiskActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class MainFragment extends Fragment {
     RadioButton lowRisk, moderateRisk, highRisk, idk;
     TextView selectARisk;
@@ -65,27 +62,28 @@ public class MainFragment extends Fragment {
         FAQ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            fragmentInterface.startFaqFrag();
+                fragmentInterface.startFaqFrag();
             }
         });
         submitButton = view.findViewById(R.id.submit_button);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-        if (lowRisk.isChecked()){
-            Intent intent = new Intent(v.getContext(), LowRiskActivity.class);
-            startActivity(intent);
-        } else if (moderateRisk.isChecked()){
-            Intent intent = new Intent(v.getContext(), ModerateRiskActivity.class);
-            startActivity(intent);
-        } else if (highRisk.isChecked()){
-            Intent intent = new Intent(v.getContext(), HighRiskActivity.class);
-            startActivity(intent);
-        }else if (idk.isChecked()){
-            fragmentInterface.startQuestionaireFrag();
-        }
+                if (lowRisk.isChecked()) {
+                    Intent intent = new Intent(v.getContext(), LowRiskActivity.class);
+                    startActivity(intent);
+                } else if (moderateRisk.isChecked()) {
+                    Intent intent = new Intent(v.getContext(), ModerateRiskActivity.class);
+                    startActivity(intent);
+                } else if (highRisk.isChecked()) {
+                    Intent intent = new Intent(v.getContext(), HighRiskActivity.class);
+                    startActivity(intent);
+                } else if (idk.isChecked()) {
+                    fragmentInterface.startQuestionaireFrag();
+                }
             }
         });
-
     }
+
+
 }
