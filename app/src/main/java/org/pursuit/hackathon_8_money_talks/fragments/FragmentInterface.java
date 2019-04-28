@@ -5,7 +5,7 @@ public interface FragmentInterface {
 
     void startQuestionaireFrag();
 
-    void startResponseFrag();
+    void startResponseFrag(String result);
 
     void startFaqFrag();
 }
