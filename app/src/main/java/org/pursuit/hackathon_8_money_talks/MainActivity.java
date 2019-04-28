@@ -13,7 +13,6 @@ import org.pursuit.hackathon_8_money_talks.fragments.SurveyQuestionsFrag;
 import org.pursuit.hackathon_8_money_talks.fragments.SurveyResponseFrag;
 
 public class MainActivity extends AppCompatActivity implements FragmentInterface {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +38,8 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     }
 
     @Override
-    public void startResponseFrag() {
-        final Fragment responseFragment = SurveyResponseFrag.newInstance();
+    public void startResponseFrag(String result) {
+        final Fragment responseFragment = SurveyResponseFrag.newInstance(result);
         inflateFragment(responseFragment);
     }
 
