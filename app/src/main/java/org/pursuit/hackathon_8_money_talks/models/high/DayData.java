@@ -2,7 +2,7 @@ package org.pursuit.hackathon_8_money_talks.models.high;
 
 import com.google.gson.annotations.SerializedName;
 
-class DayData {
+public class DayData {
     @SerializedName("1. open")
     private String open;
     @SerializedName("2. high")

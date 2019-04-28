@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Hackathon_8_Money_Talks</string>
-    <string name="header_text">Investing is hard! But with Money Maker, Now it\'s easy!</string>
+    <string name="header_text">Investing is hard! But with "Money Talks", Now it\'s easy!</string>
     <string name="risk_level_text">Please select your risk level</string>
     <string name="low_risk">Low Risk</string>
     <string name="moderate_risk">Moderate Risk</string>
@@ -98,6 +98,16 @@
     <string name="faq_investopedia_text">Investopedia</string>
     <string name="faq_babypips_text">Babypips</string>
     <string name="faq_the_balance_text">The Balance</string>
+    <string name="result_moderate">You should look into /nMODERATE RISK</string>
+    <string name="low_risk_savings_account_def_text"><b>• Why invest:</b> A savings account is completely safe in the sense that you’ll never lose money. Most accounts are government-insured up to certain limits, so you’ll likely be compensated even if the financial institution fails. \n\n<b>• Risk:</b> Cash doesn’t lose dollar value, though inflation can erode its purchasing power and it can be stolen or accidentally destroyed — risks that don’t apply to money in the bank.</string>
+    <string name="low_risk_savings_bond_def_text"><b>• Why invest:</b> The Series EE savings bonds pay interest up to 30 years, and they earn a fixed rate of return if they were issued in May 2005 or after. If a U.S. savings bond is redeemed before five years, a penalty of the last three months’ interest is charged.  \n\n<b>• Risk:</b> U.S. savings bonds come with little to no risk, and they may also come with little or no return.</string>
+    <string name="low_risk_certificates_of_deposit_def_text"><b>• Why invest:</b> With a CD, the bank promises to pay you a set rate of interest over a specified term if you leave the CD intact until the term ends. \n\n<b>• Risk:</b>If you remove funds from a CD early, you’ll usually lose some of the interest you earned. Some banks also hit you with a loss of principal as well, so it’s important to read the rules and check rates before you open a CD.</string>
+    <string name="low_risk_money_market_funds_def_text"><b>• Why invest:</b> Unlike a CD, a money market fund is liquid, which means you typically can take out your funds at any time without being penalized. \n\n<b>• Risk:</b> Money market funds usually are pretty safe, says Ben Wacek, founder and financial planner of Wacek Financial Planning in Minneapolis.</string>
+    <string name="savings_bond">2. Savings Bond</string>
+    <string name="certificates_of_deposit">3. Certificates of deposit</string>
+    <string name="money_market_funds">4. Money market funds</string>
+    <string name="low_risk_more_text">more</string>
+    <string name="low_risk_activity_description_text">An investment that’s diversified with less-risky assets is vital to ensure your earnings see growth over time.</string>
     <string name="riskResult_text">You should look into: </string>
     <string name="results_heading">The Results Are In!</string>
     <string name="home">Home</string>
