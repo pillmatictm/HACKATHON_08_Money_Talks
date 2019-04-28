@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/low_risk"
+            android:textColor="@color/brightGreen"
             android:textAlignment="center"
             android:textSize="50sp"
             android:textStyle="bold" />
@@ -37,6 +38,41 @@
                 android:text="@string/low_risk_activity_description_text"
                 android:textAlignment="center"
                 android:textSize="20sp" />
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/money_pic1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/moneypic1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/money_pic2"/>
+                <ImageView
+                    android:id="@+id/money_pic2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/moneypic2"
+                    app:layout_constraintLeft_toRightOf="@+id/money_pic1"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <ImageView
+                    android:id="@+id/money_pic3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/moneypic3"
+                    app:layout_constraintLeft_toRightOf="@+id/money_pic2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <ImageView
+                    android:id="@+id/money_pic4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/moneypic4"
+                    app:layout_constraintLeft_toRightOf="@+id/money_pic3"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -44,7 +80,8 @@
                 android:layout_margin="8dp"
                 android:padding="8dp">
 
-                <LinearLayout
+
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -55,6 +92,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/savings_account"
+                        android:textColor="@color/accentGreen"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -84,6 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/savings_bond"
+                        android:textColor="@color/accentGreen"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -112,6 +151,7 @@
                         android:id="@+id/certificates_of_deposit_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/accentGreen"
                         android:text="@string/certificates_of_deposit"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -142,6 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/money_market_funds"
+                        android:textColor="@color/accentGreen"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
