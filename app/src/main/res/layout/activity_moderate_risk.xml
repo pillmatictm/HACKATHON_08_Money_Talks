@@ -33,7 +33,7 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
-    <pl.droidsonroids.gif.GifImageView
+      <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
         android:layout_width="402dp"
         android:layout_height="208dp"
@@ -52,8 +52,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:paddingBottom="16dp"
-        android:text="Microsoft 6 Month Prices"
         android:textColor="@color/brightGreen"
+        android:text="Microsoft 6 Month Prices"
         android:textSize="20sp" />
 
     <android.support.v4.widget.NestedScrollView
@@ -171,6 +171,6 @@
 
         </android.support.v7.widget.LinearLayoutCompat>
     </android.support.v4.widget.NestedScrollView>
-
+  
 
 </LinearLayout>

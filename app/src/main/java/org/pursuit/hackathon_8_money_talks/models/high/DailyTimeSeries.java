@@ -2,7 +2,7 @@ package org.pursuit.hackathon_8_money_talks.models.high;
 
 import com.google.gson.annotations.SerializedName;
 
-class DailyTimeSeries {
+public class DailyTimeSeries {
     @SerializedName("2019-04-26")
     private DayData apr262018;
     @SerializedName("2019-04-25")
