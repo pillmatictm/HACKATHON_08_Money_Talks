@@ -6,52 +6,169 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activities.LowRiskActivity">
-   <android.support.v7.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/low_risk_activity_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:text="@string/low_risk"
-        />
-   </android.support.v7.widget.CardView>
-    <TextView
-    android:id="@+id/low_risk_activity_description"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="25sp"
-    android:textAlignment="center"
-    android:text="a bunch of words we dont know what's going in here yet blah blah blah blah blah blah blah blah"/>
 
-    <TextView
-        android:id="@+id/low_risk_activity_resources"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:text="@string/resources"/>
-    <TextView
-        android:id="@+id/low_risk_activity_link1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="link1"
-        android:textSize="20sp"/>
-    <TextView
-        android:id="@+id/low_risk_activity_link2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="link2"/>
-    <TextView
-        android:id="@+id/low_risk_activity_link3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="link3"/>
+        android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/low_risk_activity_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/low_risk"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/low_risk_activity_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/low_risk_activity_description_text"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/savings_account_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/savings_account"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/savings_account_def_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_risk_savings_account_def_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/savings_bond_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/savings_bond"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/savings_bond_def_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_risk_savings_bond_def_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/certificates_of_deposit_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/certificates_of_deposit"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/certificates_of_deposit_def_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_risk_certificates_of_deposit_def_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/money_market_funds_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/money_market_funds"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/money_market_funds_def_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_risk_money_market_funds_def_text"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:autoLink="web"
+                android:clickable="true"
+                android:focusable="true"
+                android:linksClickable="true"
+                android:text="@string/low_risk_more_text"
+                android:textColor="#2e48b2"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
