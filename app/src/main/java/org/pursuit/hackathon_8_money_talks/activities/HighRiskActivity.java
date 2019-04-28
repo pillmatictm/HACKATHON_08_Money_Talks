@@ -1,3 +1,4 @@
+
 package org.pursuit.hackathon_8_money_talks.activities;
 
 import android.support.v7.app.AppCompatActivity;
@@ -41,40 +42,40 @@ public class HighRiskActivity extends AppCompatActivity {
     }
 
     private void retrofitCall() {
-            final Retrofit retrofit = RetrofitSingleton.getInstance();
-            final HighRiskApiCall highRiskApiCall = retrofit.create(HighRiskApiCall.class);
-            highRiskApiCall.getDailyData(FUNCTION,SYMBOL,API_KEY)
-            .enqueue(new Callback<DailyMetaDataWrapper>() {
-                @Override
-                public void onResponse(Call<DailyMetaDataWrapper> call, Response<DailyMetaDataWrapper> response) {
-                    DayData apr262019 = response.body().getDailyTimeSeries().getApr262018();
-                    String Apr26 = "Open: " + apr262019.getOpen() + "\n" + "Close: " +apr262019.getClose() + "\n" + "High: " + apr262019.getHigh() + "\n" + "Low: " +apr262019.getLow();
-                    apr262019textView.setText(Apr26);
+        final Retrofit retrofit = RetrofitSingleton.getInstance();
+        final HighRiskApiCall highRiskApiCall = retrofit.create(HighRiskApiCall.class);
+        highRiskApiCall.getDailyData(FUNCTION,SYMBOL,API_KEY)
+                .enqueue(new Callback<DailyMetaDataWrapper>() {
+                    @Override
+                    public void onResponse(Call<DailyMetaDataWrapper> call, Response<DailyMetaDataWrapper> response) {
+                        DayData apr262019 = response.body().getDailyTimeSeries().getApr262018();
+                        String Apr26 = "April 26th "+"\nOpen: " + apr262019.getOpen() + "\n" + "Close: " +apr262019.getClose() + "\n" + "High: " + apr262019.getHigh() + "\n" + "Low: " +apr262019.getLow();
+                        apr262019textView.setText(Apr26);
 
-                    DayData apr252019 = response.body().getDailyTimeSeries().getApr262018();
-                    String Apr25 = "Open: " + apr252019.getOpen() + "\n" + "Close: " +apr252019.getClose() + "\n" + "High: " + apr252019.getHigh() + "\n" + "Low: " +apr252019.getLow();
-                    apr252019textView.setText(Apr25);
+                        DayData apr252019 = response.body().getDailyTimeSeries().getApr262018();
+                        String Apr25 = "April 25th "+ "\nOpen: " + apr252019.getOpen() + "\n" + "Close: " +apr252019.getClose() + "\n" + "High: " + apr252019.getHigh() + "\n" + "Low: " +apr252019.getLow();
+                        apr252019textView.setText(Apr25);
 
-                    DayData apr242019 = response.body().getDailyTimeSeries().getApr262018();
-                    String Apr24 = "Open: " + apr242019.getOpen() + "\n" + "Close: " +apr242019.getClose() + "\n" + "High: " + apr242019.getHigh() + "\n" + "Low: " +apr242019.getLow();
-                    apr242019textView.setText(Apr24);
+                        DayData apr242019 = response.body().getDailyTimeSeries().getApr262018();
+                        String Apr24 = "April 24th "+ "\nOpen: " + apr242019.getOpen() + "\n" + "Close: " +apr242019.getClose() + "\n" + "High: " + apr242019.getHigh() + "\n" + "Low: " +apr242019.getLow();
+                        apr242019textView.setText(Apr24);
 
-                    DayData apr232019 = response.body().getDailyTimeSeries().getApr262018();
-                    String Apr23 = "Open: " + apr232019.getOpen() + "\n" + "Close: " +apr232019.getClose() + "\n" + "High: " + apr232019.getHigh() + "\n" + "Low: " +apr232019.getLow();
-                    apr232019textView.setText(Apr23);
+                        DayData apr232019 = response.body().getDailyTimeSeries().getApr262018();
+                        String Apr23 = "April 23th "+ "\nOpen: " + apr232019.getOpen() + "\n" + "Close: " +apr232019.getClose() + "\n" + "High: " + apr232019.getHigh() + "\n" + "Low: " +apr232019.getLow();
+                        apr232019textView.setText(Apr23);
 
-                    DayData apr222019 = response.body().getDailyTimeSeries().getApr262018();
-                    String Apr22 = "Open: " + apr222019.getOpen() + "\n" + "Close: " +apr222019.getClose() + "\n" + "High: " + apr222019.getHigh() + "\n" + "Low: " +apr222019.getLow();
-                    apr222019textView.setText(Apr22);
+                        DayData apr222019 = response.body().getDailyTimeSeries().getApr262018();
+                        String Apr22 = "April 22th "+ "\nOpen: " + apr222019.getOpen() + "\n" + "Close: " +apr222019.getClose() + "\n" + "High: " + apr222019.getHigh() + "\n" + "Low: " +apr222019.getLow();
+                        apr222019textView.setText(Apr22);
 
 
-                }
+                    }
 
-                @Override
-                public void onFailure(Call<DailyMetaDataWrapper> call, Throwable t) {
+                    @Override
+                    public void onFailure(Call<DailyMetaDataWrapper> call, Throwable t) {
 
-                }
-            });
+                    }
+                });
     }
 
 }

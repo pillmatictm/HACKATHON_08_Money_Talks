@@ -25,30 +25,30 @@
         android:layout_height="match_parent"
         tools:text="Buy\nSell\nOpen\nClose" />
 
-    <TextView
-        android:id="@+id/high_risk_stocks2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/high_risk_stocks2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/high_risk_stocks3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/high_risk_stocks3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/high_risk_stocks4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/high_risk_stocks4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/high_risk_stocks5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/high_risk_stocks5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/high_risk_stocks6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/high_risk_stocks6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 </android.support.v7.widget.CardView>
             </LinearLayout>
         </FrameLayout>

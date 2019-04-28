@@ -16,15 +16,6 @@ public class DailyTimeSeries {
     @SerializedName("2019-04-21")
     private DayData apr212018;
 
-    public DailyTimeSeries(DayData apr262018, DayData apr252018, DayData apr242018, DayData apr232018, DayData apr222018, DayData apr212018) {
-        this.apr262018 = apr262018;
-        this.apr252018 = apr252018;
-        this.apr242018 = apr242018;
-        this.apr232018 = apr232018;
-        this.apr222018 = apr222018;
-        this.apr212018 = apr212018;
-    }
-
     public DayData getApr262018() {
         return apr262018;
     }
