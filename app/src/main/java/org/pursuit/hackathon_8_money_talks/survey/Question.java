@@ -6,6 +6,7 @@ import java.util.Map;
 public class Question {
     private Map<String, Answer> riskHashMap = new HashMap<>();
     private String promptQuestion;
+    private String selectedUserAnswer;
 
     public Question(String promptQuestion) {
         this.promptQuestion = promptQuestion;
@@ -21,5 +22,13 @@ public class Question {
 
     public void addAnswer(String key, Answer answer){
         this.riskHashMap.put(key,answer);
+    }
+
+    public Answer getSelectedUserAnswer(){
+        return riskHashMap.get(selectedUserAnswer);
+    }
+
+    public void setSelectedUserAnswer(String selectedUserAnswer) {
+        this.selectedUserAnswer = selectedUserAnswer;
     }
 }

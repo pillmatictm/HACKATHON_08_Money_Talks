@@ -108,4 +108,10 @@
     <string name="money_market_funds">4. Money market funds</string>
     <string name="low_risk_more_text">more</string>
     <string name="low_risk_activity_description_text">An investment that’s diversified with less-risky assets is vital to ensure your earnings see growth over time.</string>
+    <string name="riskResult_text">You should look into: </string>
+    <string name="results_heading">The Results Are In!</string>
+    <string name="home">Home</string>
+    <string name="good_job">You\'re one step closer to the bucks</string>
+    <string name="begin_goHome_text">Begin your pursuit by going back to the home screen and selecting your risk level</string>
+    <string name="money_talks">MONEY TALKS!</string>
 </resources>

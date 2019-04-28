@@ -20,6 +20,10 @@ import org.pursuit.hackathon_8_money_talks.survey.Question;
 import org.pursuit.hackathon_8_money_talks.survey.RiskLevel;
 
 public class SurveyQuestionsFrag extends Fragment {
+    public static final String LOW = "Low Risk";
+    public static final String MED = "Moderate Risk";
+    public static final String HIGH = "High Risk";
+
     private FragmentInterface fragmentInterface;
 
     public static int low = 0;
@@ -39,6 +43,17 @@ public class SurveyQuestionsFrag extends Fragment {
     private TextView question08;
     private TextView question09;
     private TextView question10;
+
+    private RadioGroup choice01;
+    private RadioGroup choice02;
+    private RadioGroup choice03;
+    private RadioGroup choice04;
+    private RadioGroup choice05;
+    private RadioGroup choice06;
+    private RadioGroup choice07;
+    private RadioGroup choice08;
+    private RadioGroup choice09;
+    private RadioGroup choice10;
 
 
     private RadioButton choice01_optionA;
@@ -121,15 +136,42 @@ public class SurveyQuestionsFrag extends Fragment {
 
         findViews(view);
         setViews();
+        setSurvey();
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentInterface.startResponseFrag();
+                for (Question question : surveyQuestions) {
+                    Answer answer = question.getSelectedUserAnswer();
+                    if (answer != null) {
+                        RiskLevel riskLevel = answer.getRiskLevel();
+                        switch (riskLevel) {
+                            case LOW_RISK:
+                                low++;
+                                break;
+                            case MODERATE_RISK:
+                                med++;
+                                break;
+                            case HIGH_RISK:
+                                high++;
+                                break;
+                        }
+                    }
+                }
+
+                String riskResult;
+                if (low > med && low > high) {
+                    riskResult = LOW;
+
+                } else if (med > low && med > high) {
+                    riskResult = MED;
+                } else {
+                    riskResult = HIGH;
+                }
+                fragmentInterface.startResponseFrag(riskResult);
             }
         });
     }
-
 
     private void setViews() {
         question01.setText(getString(R.string.question01));
@@ -143,6 +185,209 @@ public class SurveyQuestionsFrag extends Fragment {
         question09.setText(getString(R.string.question09));
         question10.setText(getString(R.string.question10));
 
+        choice01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[0];
+                switch (checkedId) {
+                    case R.id.choices01_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices01_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices01_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices01_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
+
+        choice02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[1];
+                switch (checkedId) {
+                    case R.id.choices02_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices02_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices02_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices02_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
+
+        choice03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[2];
+                switch (checkedId) {
+                    case R.id.choices03_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices03_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices03_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices03_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
+
+        choice04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[3];
+                switch (checkedId) {
+                    case R.id.choices04_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices04_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices04_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices04_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
+
+        choice05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[4];
+                switch (checkedId) {
+                    case R.id.choices05_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices05_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices05_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices05_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
+
+        choice06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[5];
+                switch (checkedId) {
+                    case R.id.choices06_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices06_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                }
+            }
+        });
+
+        choice07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[6];
+                switch (checkedId) {
+                    case R.id.choices07_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices07_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices07_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                }
+            }
+        });
+
+        choice08.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[7];
+                switch (checkedId) {
+                    case R.id.choices08_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices08_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices08_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices08_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                    case R.id.choices08_optionE:
+                        surveyQuestion.setSelectedUserAnswer("E");
+                        break;
+                }
+            }
+        });
+
+        choice09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[8];
+                switch (checkedId) {
+                    case R.id.choices09_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices09_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices09_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices09_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
+
+        choice10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Question surveyQuestion = surveyQuestions[9];
+                switch (checkedId) {
+                    case R.id.choices10_optionA:
+                        surveyQuestion.setSelectedUserAnswer("A");
+                        break;
+                    case R.id.choices10_optionB:
+                        surveyQuestion.setSelectedUserAnswer("B");
+                        break;
+                    case R.id.choices10_optionC:
+                        surveyQuestion.setSelectedUserAnswer("C");
+                        break;
+                    case R.id.choices10_optionD:
+                        surveyQuestion.setSelectedUserAnswer("D");
+                        break;
+                }
+            }
+        });
 
         choice01_optionA.setText(getString(R.string.q01_choice1));
         choice01_optionB.setText(getString(R.string.q01_choice2));
@@ -208,6 +453,17 @@ public class SurveyQuestionsFrag extends Fragment {
         question09 = view.findViewById(R.id.question09_text);
         question10 = view.findViewById(R.id.question10_text);
 
+        choice01 = view.findViewById(R.id.choices01);
+        choice02 = view.findViewById(R.id.choices02);
+        choice03 = view.findViewById(R.id.choices03);
+        choice04 = view.findViewById(R.id.choices04);
+        choice05 = view.findViewById(R.id.choices05);
+        choice06 = view.findViewById(R.id.choices06);
+        choice07 = view.findViewById(R.id.choices07);
+        choice08 = view.findViewById(R.id.choices08);
+        choice09 = view.findViewById(R.id.choices09);
+        choice10 = view.findViewById(R.id.choices10);
+
 
         choice01_optionA = view.findViewById(R.id.choices01_optionA);
         choice01_optionB = view.findViewById(R.id.choices01_optionB);
@@ -258,104 +514,68 @@ public class SurveyQuestionsFrag extends Fragment {
         choice10_optionD = view.findViewById(R.id.choices10_optionD);
     }
 
-//    public void setSurvey() {
-//        Question q01 = new Question(getString(R.string.question01));
-//        q01.addAnswer("A", new Answer(getString(R.string.q01_choice1), RiskLevel.HIGH_RISK));
-//        q01.addAnswer("B", new Answer(getString(R.string.q01_choice2), RiskLevel.MODERATE_RISK));
-//        q01.addAnswer("C", new Answer(getString(R.string.q01_choice3), RiskLevel.MODERATE_RISK));
-//        q01.addAnswer("D", new Answer(getString(R.string.q01_choice4), RiskLevel.LOW_RISK));
-//
-//        Question q02 = new Question(getString(R.string.question02));
-//        q02.addAnswer("A", new Answer(getString(R.string.q02_choice1), RiskLevel.HIGH_RISK));
-//        q02.addAnswer("B", new Answer(getString(R.string.q02_choice2), RiskLevel.LOW_RISK));
-//        q02.addAnswer("C", new Answer(getString(R.string.q02_choice3), RiskLevel.MODERATE_RISK));
-//        q02.addAnswer("D", new Answer(getString(R.string.q02_choice4), RiskLevel.MODERATE_RISK));
-//
-//        Question q03 = new Question(getString(R.string.question03));
-//        q03.addAnswer("A", new Answer(getString(R.string.q03_choice1), RiskLevel.LOW_RISK));
-//        q03.addAnswer("B", new Answer(getString(R.string.q03_choice2), RiskLevel.MODERATE_RISK));
-//        q03.addAnswer("C", new Answer(getString(R.string.q03_choice3), RiskLevel.MODERATE_RISK));
-//        q03.addAnswer("D", new Answer(getString(R.string.q03_choice4), RiskLevel.HIGH_RISK));
-//
-//        Question q04 = new Question(getString(R.string.question04));
-//        q04.addAnswer("A", new Answer(getString(R.string.q04_choice1), RiskLevel.LOW_RISK));
-//        q04.addAnswer("B", new Answer(getString(R.string.q04_choice2), RiskLevel.MODERATE_RISK));
-//        q04.addAnswer("C", new Answer(getString(R.string.q04_choice3), RiskLevel.MODERATE_RISK));
-//        q04.addAnswer("D", new Answer(getString(R.string.q04_choice4), RiskLevel.HIGH_RISK));
-//
-//        Question q05 = new Question(getString(R.string.question05));
-//        q05.addAnswer("A", new Answer(getString(R.string.q05_choice1), RiskLevel.HIGH_RISK));
-//        q05.addAnswer("B", new Answer(getString(R.string.q05_choice2), RiskLevel.HIGH_RISK));
-//        q05.addAnswer("C", new Answer(getString(R.string.q05_choice3), RiskLevel.MODERATE_RISK));
-//        q05.addAnswer("D", new Answer(getString(R.string.q05_choice4), RiskLevel.LOW_RISK));
-//
-//        Question q06 = new Question(getString(R.string.question06));
-//        q06.addAnswer("A", new Answer(getString(R.string.q06_choice1), RiskLevel.LOW_RISK));
-//        q06.addAnswer("B", new Answer(getString(R.string.q06_choice2), RiskLevel.HIGH_RISK));
-//
-//        Question q07 = new Question(getString(R.string.question07));
-//        q07.addAnswer("A", new Answer(getString(R.string.q07_choice1), RiskLevel.HIGH_RISK));
-//        q07.addAnswer("B", new Answer(getString(R.string.q07_choice2), RiskLevel.MODERATE_RISK));
-//        q07.addAnswer("C", new Answer(getString(R.string.q07_choice3), RiskLevel.LOW_RISK));
-//
-//        Question q08 = new Question(getString(R.string.question08));
-//        q08.addAnswer("A", new Answer(getString(R.string.q08_choice1), RiskLevel.LOW_RISK));
-//        q08.addAnswer("B", new Answer(getString(R.string.q08_choice2), RiskLevel.LOW_RISK));
-//        q08.addAnswer("C", new Answer(getString(R.string.q08_choice3), RiskLevel.MODERATE_RISK));
-//        q08.addAnswer("D", new Answer(getString(R.string.q08_choice4), RiskLevel.MODERATE_RISK));
-//        q08.addAnswer("E", new Answer(getString(R.string.q08_choice5), RiskLevel.HIGH_RISK));
-//
-//        Question q09 = new Question(getString(R.string.question09));
-//        q09.addAnswer("A", new Answer(getString(R.string.q09_choice1), RiskLevel.HIGH_RISK));
-//        q09.addAnswer("B", new Answer(getString(R.string.q09_choice2), RiskLevel.MODERATE_RISK));
-//        q09.addAnswer("C", new Answer(getString(R.string.q09_choice3), RiskLevel.MODERATE_RISK));
-//        q09.addAnswer("D", new Answer(getString(R.string.q09_choice4), RiskLevel.LOW_RISK));
-//
-//        Question q10 = new Question(getString(R.string.question10));
-//        q10.addAnswer("A", new Answer(getString(R.string.q10_choice1), RiskLevel.LOW_RISK));
-//        q10.addAnswer("B", new Answer(getString(R.string.q10_choice2), RiskLevel.MODERATE_RISK));
-//        q10.addAnswer("C", new Answer(getString(R.string.q10_choice3), RiskLevel.MODERATE_RISK));
-//        q10.addAnswer("D", new Answer(getString(R.string.q10_choice4), RiskLevel.HIGH_RISK));
-//
-//        surveyQuestions = new Question[]{
-//                q01, q02, q03, q04, q05, q06, q07, q08, q09, q10
-//        };
-//
-//        questionaire(surveyQuestions);
-//    }
-//
-//    public static void questionaire(Question[] surveyQuestions) {
-//        for (Question question : surveyQuestions) {
-//            question.getAnswer();
-//            String userChoice =
-//
-//        }
-//        checkRiskValue(userChoice, question);
-//
-//
-//    if (low > med && low > high){
-//        //is low has the highest tally
-//
-//    } else if (med > low && med > high){
-//        //if med has the highest tally
-//
-//    } else
-//        //if high has the highest tally
-//
-//    }
-//
-//    private void checkRiskValue(String userChoice, Question question) {
-//        RiskLevel riskLevel = question.getAnswer(userChoice).getRiskLevel();
-//        switch (riskLevel) {
-//            case LOW_RISK:
-//                low++;
-//                break;
-//            case MODERATE_RISK:
-//                med++;
-//                break;
-//            case HIGH_RISK:
-//                high++;
-//                break;
-//        }
-//    }
+    public void setSurvey() {
+        Question q01 = new Question(getString(R.string.question01));
+        q01.addAnswer("A", new Answer(getString(R.string.q01_choice1), RiskLevel.HIGH_RISK));
+        q01.addAnswer("B", new Answer(getString(R.string.q01_choice2), RiskLevel.MODERATE_RISK));
+        q01.addAnswer("C", new Answer(getString(R.string.q01_choice3), RiskLevel.MODERATE_RISK));
+        q01.addAnswer("D", new Answer(getString(R.string.q01_choice4), RiskLevel.LOW_RISK));
+
+        Question q02 = new Question(getString(R.string.question02));
+        q02.addAnswer("A", new Answer(getString(R.string.q02_choice1), RiskLevel.HIGH_RISK));
+        q02.addAnswer("B", new Answer(getString(R.string.q02_choice2), RiskLevel.LOW_RISK));
+        q02.addAnswer("C", new Answer(getString(R.string.q02_choice3), RiskLevel.MODERATE_RISK));
+        q02.addAnswer("D", new Answer(getString(R.string.q02_choice4), RiskLevel.MODERATE_RISK));
+
+        Question q03 = new Question(getString(R.string.question03));
+        q03.addAnswer("A", new Answer(getString(R.string.q03_choice1), RiskLevel.LOW_RISK));
+        q03.addAnswer("B", new Answer(getString(R.string.q03_choice2), RiskLevel.MODERATE_RISK));
+        q03.addAnswer("C", new Answer(getString(R.string.q03_choice3), RiskLevel.MODERATE_RISK));
+        q03.addAnswer("D", new Answer(getString(R.string.q03_choice4), RiskLevel.HIGH_RISK));
+
+        Question q04 = new Question(getString(R.string.question04));
+        q04.addAnswer("A", new Answer(getString(R.string.q04_choice1), RiskLevel.LOW_RISK));
+        q04.addAnswer("B", new Answer(getString(R.string.q04_choice2), RiskLevel.MODERATE_RISK));
+        q04.addAnswer("C", new Answer(getString(R.string.q04_choice3), RiskLevel.MODERATE_RISK));
+        q04.addAnswer("D", new Answer(getString(R.string.q04_choice4), RiskLevel.HIGH_RISK));
+
+        Question q05 = new Question(getString(R.string.question05));
+        q05.addAnswer("A", new Answer(getString(R.string.q05_choice1), RiskLevel.HIGH_RISK));
+        q05.addAnswer("B", new Answer(getString(R.string.q05_choice2), RiskLevel.HIGH_RISK));
+        q05.addAnswer("C", new Answer(getString(R.string.q05_choice3), RiskLevel.MODERATE_RISK));
+        q05.addAnswer("D", new Answer(getString(R.string.q05_choice4), RiskLevel.LOW_RISK));
+
+        Question q06 = new Question(getString(R.string.question06));
+        q06.addAnswer("A", new Answer(getString(R.string.q06_choice1), RiskLevel.LOW_RISK));
+        q06.addAnswer("B", new Answer(getString(R.string.q06_choice2), RiskLevel.HIGH_RISK));
+
+        Question q07 = new Question(getString(R.string.question07));
+        q07.addAnswer("A", new Answer(getString(R.string.q07_choice1), RiskLevel.HIGH_RISK));
+        q07.addAnswer("B", new Answer(getString(R.string.q07_choice2), RiskLevel.MODERATE_RISK));
+        q07.addAnswer("C", new Answer(getString(R.string.q07_choice3), RiskLevel.LOW_RISK));
+
+        Question q08 = new Question(getString(R.string.question08));
+        q08.addAnswer("A", new Answer(getString(R.string.q08_choice1), RiskLevel.LOW_RISK));
+        q08.addAnswer("B", new Answer(getString(R.string.q08_choice2), RiskLevel.LOW_RISK));
+        q08.addAnswer("C", new Answer(getString(R.string.q08_choice3), RiskLevel.MODERATE_RISK));
+        q08.addAnswer("D", new Answer(getString(R.string.q08_choice4), RiskLevel.MODERATE_RISK));
+        q08.addAnswer("E", new Answer(getString(R.string.q08_choice5), RiskLevel.HIGH_RISK));
+
+        Question q09 = new Question(getString(R.string.question09));
+        q09.addAnswer("A", new Answer(getString(R.string.q09_choice1), RiskLevel.HIGH_RISK));
+        q09.addAnswer("B", new Answer(getString(R.string.q09_choice2), RiskLevel.MODERATE_RISK));
+        q09.addAnswer("C", new Answer(getString(R.string.q09_choice3), RiskLevel.MODERATE_RISK));
+        q09.addAnswer("D", new Answer(getString(R.string.q09_choice4), RiskLevel.LOW_RISK));
+
+        Question q10 = new Question(getString(R.string.question10));
+        q10.addAnswer("A", new Answer(getString(R.string.q10_choice1), RiskLevel.LOW_RISK));
+        q10.addAnswer("B", new Answer(getString(R.string.q10_choice2), RiskLevel.MODERATE_RISK));
+        q10.addAnswer("C", new Answer(getString(R.string.q10_choice3), RiskLevel.MODERATE_RISK));
+        q10.addAnswer("D", new Answer(getString(R.string.q10_choice4), RiskLevel.HIGH_RISK));
+
+        surveyQuestions = new Question[]{
+                q01, q02, q03, q04, q05, q06, q07, q08, q09, q10
+        };
+    }
 }
+
