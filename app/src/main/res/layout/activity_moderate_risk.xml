@@ -30,7 +30,10 @@
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="16dp" />
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <TextView
         android:id="@+id/moderate_risk_title"
         android:layout_width="match_parent"
