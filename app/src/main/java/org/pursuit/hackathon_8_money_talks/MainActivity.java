@@ -26,8 +26,10 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
 
     @Override
     public void startMainFrag() {
-    final Fragment mainFragment = MainFragment.newInstance();
-    inflateFragment(mainFragment);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, MainFragment.newInstance())
+                .commit();
     }
 
     @Override
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     public void startResponseFrag() {
         final Fragment responseFragment = SurveyResponseFrag.newInstance();
         inflateFragment(responseFragment);
-
     }
 
     @Override

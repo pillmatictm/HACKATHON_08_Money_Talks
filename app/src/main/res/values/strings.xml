@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Hackathon_8_Money_Talks</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="header_text">Investing is hard! But with Money Maker, Now it\'s easy!</string>
     <string name="risk_level_text">Please select your risk level</string>
     <string name="low_risk">Low Risk</string>
@@ -12,5 +9,55 @@
     <string name="submit">Submit</string>
     <string name="faq"><u>FAQ</u></string>
     <string name="resources">Resources</string>
+    <string name="question01">How old are you?</string>
+    <string name="question02">What is your occupation?</string>
+    <string name="question03">What is your net worth?</string>
+    <string name="question04">What is your income?</string>
+    <string name="question05">What is your marital status?</string>
+    <string name="question06">Do you have any children under 18?</string>
+    <string name="question07">What is your current living situation?</string>
+    <string name="question08">What is your current credit score?</string>
+    <string name="question09">When do you anticipate needing this money?</string>
+    <string name="question10">How would you rate your experience level in investing?</string>
+    <string name="q01_choice1">18 – 34</string>
+    <string name="q01_choice2">35 – 50</string>
+    <string name="q01_choice3">51 – 64</string>
+    <string name="q01_choice4">65+</string>
+    <string name="q02_choice1">Employed</string>
+    <string name="q02_choice2">Unemployed</string>
+    <string name="q02_choice3">Student</string>
+    <string name="q02_choice4">Retired</string>
+    <string name="q03_choice1">$0 – $25k</string>
+    <string name="q03_choice2">$26k – 50k</string>
+    <string name="q03_choice3">$51k – $80k</string>
+    <string name="q03_choice4">$80k+</string>
+    <string name="q04_choice1">$0 – $25k</string>
+    <string name="q04_choice2">$26k – 50k</string>
+    <string name="q04_choice3">$51k – $80k</string>
+    <string name="q04_choice4">$80k+</string>
+    <string name="q05_choice1">Single</string>
+    <string name="q05_choice2">Married</string>
+    <string name="q05_choice3">Separated</string>
+    <string name="q05_choice4">Divorced/Widowed</string>
+    <string name="q06_choice1">Yes</string>
+    <string name="q06_choice2">No</string>
+    <string name="q07_choice1">Home Owner</string>
+    <string name="q07_choice2">Renter</string>
+    <string name="q07_choice3">Other</string>
+    <string name="q08_choice1">350 – 579</string>
+    <string name="q08_choice2">560 – 669</string>
+    <string name="q08_choice3">670 – 739</string>
+    <string name="q08_choice4">740 – 799</string>
+    <string name="q08_choice5">800 – 850</string>
+    <string name="q09_choice1">2 weeks</string>
+    <string name="q09_choice2">2 – 8 months</string>
+    <string name="q09_choice3">1 year</string>
+    <string name="q09_choice4">1+ years</string>
+    <string name="q10_choice1">Little to no experience</string>
+    <string name="q10_choice2">Fairly experienced</string>
+    <string name="q10_choice3">I\'ve made some investments in the past</string>
+    <string name="q10_choice4">Experienced Investor</string>
+    <string name="start_survey_text">Please complete this brief survey to determine an appropriate risk level that meets your needs</string>
+    <string name="loading_text">Calculating Your Result…\nOne Moment Please</string>
     <string name="toolbar_title">Money Talks</string>
 </resources>
