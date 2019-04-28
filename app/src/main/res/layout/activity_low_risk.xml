@@ -31,11 +31,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <TextView
                 android:id="@+id/low_risk_activity_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/low_risk_activity_description_text"
+                android:text=" An investment that’s diversified with less-risky assets is vital to ensure your earnings see growth over time."
                 android:textAlignment="center"
                 android:textSize="20sp" />
             <android.support.constraint.ConstraintLayout
@@ -78,7 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:padding="8dp">
+                android:padding="16dp"
+                app:cardCornerRadius="16dp">
 
 
             <LinearLayout
@@ -100,7 +102,7 @@
                         android:id="@+id/savings_account_def_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/low_risk_savings_account_def_text"
+                        android:text="Why invest: A savings account is completely safe in the sense that you’ll never lose money. Most accounts are government-insured up to certain limits, so you’ll likely be compensated even if the financial institution fails. \n\nRisk: Cash doesn’t lose dollar value, though inflation can erode its purchasing power and it can be stolen or accidentally destroyed — risks that don’t apply to money in the bank."
                         android:textSize="16sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -109,7 +111,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:padding="8dp">
+                android:padding="16dp"
+                app:cardCornerRadius="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -130,7 +133,7 @@
                         android:id="@+id/savings_bond_def_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/low_risk_savings_bond_def_text"
+                        android:text="Why invest: The Series EE savings bonds pay interest up to 30 years, and they earn a fixed rate of return if they were issued in May 2005 or after. If a U.S. savings bond is redeemed before five years, a penalty of the last three months’ interest is charged. \n\nRisk: U.S. savings bonds come with little to no risk, and they may also come with little or no return."
                         android:textSize="16sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -139,7 +142,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:padding="8dp">
+                android:padding="16dp"
+                app:cardCornerRadius="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -160,7 +164,7 @@
                         android:id="@+id/certificates_of_deposit_def_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/low_risk_certificates_of_deposit_def_text"
+                        android:text="Why invest: With a CD, the bank promises to pay you a set rate of interest over a specified term if you leave the CD intact until the term ends. \n\nRisk:If you remove funds from a CD early, you’ll usually lose some of the interest you earned. Some banks also hit you with a loss of principal as well, so it’s important to read the rules and check rates before you open a CD."
                         android:textSize="16sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -169,7 +173,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:padding="8dp">
+                android:padding="16dp"
+                app:cardCornerRadius="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -190,26 +195,25 @@
                         android:id="@+id/money_market_funds_def_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/low_risk_money_market_funds_def_text"
+                        android:text="Why invest: Unlike a CD, a money market fund is liquid, which means you typically can take out your funds at any time without being penalized. \n\nRisk: Money market funds usually are pretty safe, says Ben Wacek, founder and financial planner of Wacek Financial Planning in Minneapolis."
                         android:textSize="16sp" />
 
+                    <TextView
+                        android:id="@+id/more"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:autoLink="web"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:linksClickable="true"
+                        android:text="more"
+                        android:textColor="#2e48b2"
+                        android:textSize="16sp"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <TextView
-                android:id="@+id/more"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:autoLink="web"
-                android:clickable="true"
-                android:focusable="true"
-                android:linksClickable="true"
-                android:text="@string/low_risk_more_text"
-                android:textColor="#2e48b2"
-                android:textSize="16sp" />
-
         </LinearLayout>
+
     </ScrollView>
 </LinearLayout>

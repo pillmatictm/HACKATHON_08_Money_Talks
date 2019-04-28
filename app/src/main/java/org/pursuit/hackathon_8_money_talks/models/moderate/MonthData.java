@@ -2,7 +2,7 @@ package org.pursuit.hackathon_8_money_talks.models.moderate;
 
 import com.google.gson.annotations.SerializedName;
 
-class MonthData {
+public class MonthData {
     @SerializedName("1. open")
     private String open;
     @SerializedName("2. high")
@@ -33,6 +33,5 @@ class MonthData {
     public String getVolume() {
         return volume;
     }
-
 
 }
