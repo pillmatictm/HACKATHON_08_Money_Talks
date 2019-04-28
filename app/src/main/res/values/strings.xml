@@ -7,7 +7,7 @@
     <string name="high_risk">High Risk</string>
     <string name="dont_know">I don\'t know!</string>
     <string name="submit">Submit</string>
-    <string name="faq">FAQ</string>
+    <string name="faq"><u>FAQ</u></string>
     <string name="resources">Resources</string>
     <string name="question01">How old are you?</string>
     <string name="question02">What is your occupation?</string>
@@ -59,4 +59,5 @@
     <string name="q10_choice4">Experienced Investor</string>
     <string name="start_survey_text">Please complete this brief survey to determine an appropriate risk level that meets your needs</string>
     <string name="loading_text">Calculating Your Result…\nOne Moment Please</string>
+    <string name="toolbar_title">Money Talks</string>
 </resources>

@@ -3,4 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="hyperlinkBlue">#0000EE</color>
+    <color name="darkGreen">#388E3C</color>
+    <color name="lightGreen">#C8E6C9</color>
+    <color name="brightGreen">#4CAF50</color>
+    <color name="accentGreen">#8BC44A</color>
+    <color name="black">#212121</color>
+    <color name="grey">#757575</color>
+    <color name="lightGrey">#BDBDBD</color>
+
 </resources>

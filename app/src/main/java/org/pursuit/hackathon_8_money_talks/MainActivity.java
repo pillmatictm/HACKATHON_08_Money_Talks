@@ -2,6 +2,7 @@ package org.pursuit.hackathon_8_money_talks;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.toolbar_title));
+
         startMainFrag();
     }
 
