@@ -8,18 +8,32 @@
     android:orientation="vertical"
     tools:context=".activities.ModerateRiskActivity">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/moderate_risk_activity_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/moderate_risk"
+            android:textAlignment="center"
+            android:textColor="@color/brightGreen"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+
     <TextView
-        android:id="@+id/moderate_risk_activity_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="@string/moderate_risk"
+        android:text="An investments are usually certain kinds of stocks, bonds and mutual funds that pay handsomely over the long term. "
         android:textAlignment="center"
-        android:textColor="@color/brightGreen"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-    <pl.droidsonroids.gif.GifImageView
+        android:textSize="20sp" />
+
+      <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
         android:layout_width="402dp"
         android:layout_height="208dp"
@@ -35,16 +49,128 @@
         android:id="@+id/moderate_risk_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:paddingBottom="16dp"
         android:textColor="@color/brightGreen"
         android:text="Microsoft 6 Month Prices"
         android:textSize="20sp" />
-<FrameLayout
-    android:id="@+id/moderate_risk_container"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-</FrameLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <TextView
+                    android:id="@+id/moderate_risk_activity_month_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Buy\nSell\nOpen\nClose" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <TextView
+                    android:id="@+id/moderate_risk_activity_month_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <TextView
+                    android:id="@+id/moderate_risk_activity_month_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <TextView
+                    android:id="@+id/moderate_risk_activity_month_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <TextView
+                    android:id="@+id/moderate_risk_activity_month_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <TextView
+                    android:id="@+id/moderate_risk_activity_month_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/lightGrey">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Explanation"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open: The price at the beginning of the trading day    \nClose: The final price at the ending of the trading day   \nLow: The lowest price reached during the day   \nHigh: The highest price the stock reached during the day "
+                        android:textSize="16sp" />
+                </android.support.v7.widget.LinearLayoutCompat>
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+  
 
 </LinearLayout>
